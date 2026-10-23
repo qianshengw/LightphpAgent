@@ -1,0 +1,41 @@
+{
+    "name": "wxai-team/lightagent-php",
+    "description": "LightAgent PHP - a lightweight, fully-featured AI Agent framework (No LangChain / No LlamaIndex). Reference design: LightAgent (Python).",
+    "type": "library",
+    "license": "Apache-2.0",
+    "keywords": [
+        "ai", "agent", "llm", "mcp", "workflow", "dag", "openai",
+        "tool-calling", "multi-agent", "rag", "lightweight"
+    ],
+    "require": {
+        "php": ">=8.1",
+        "ext-pdo_sqlite": "*",
+        "ext-curl": "*",
+        "ext-mbstring": "*",
+        "ext-ctype": "*"
+    },
+    "suggest": {
+        "ext-sockets": "For signal handling in async transports",
+        "ext-openssl": "For HTTPS model endpoints (usually bundled)"
+    },
+    "autoload": {
+        "psr-4": {
+            "LightAgent\\": "src/",
+            "LightAgent\\Tests\\": "tests/"
+        },
+        "files": [
+            "coroutine_bootstrap.php",
+            "coroutine/amphp/functions.php",
+            "coroutine/amphp/Future/functions.php",
+            "coroutine/amphp/Internal/functions.php",
+            "coroutine/sync/functions.php",
+            "src/Skills/create_skill_tools.php"
+        ]
+    },
+    "config": {
+        "optimize-autoloader": true
+    },
+    "support": {
+        "docs": "https://github.com/wxai-space/LightAgent"
+    }
+}
